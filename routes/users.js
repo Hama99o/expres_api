@@ -1,7 +1,6 @@
 const = express = require('express')
 const router = express.Router
 
-
 const users = [{name: 'hama', email: 'hmmshl@gmail.com'}]
 
 router.get ('/', (_, res) => {
@@ -17,6 +16,7 @@ router.get('/user/:name', (req, res) => {
   const user = users.filter((user) => user.name === name)[0]
   res.json({  ok: true,  user })
 })
+
 router.post ('/adduser',(req, res) => {
   const { name, email } = req.body
   if (name && email ){
