@@ -1,6 +1,5 @@
 const = express = require('express')
 const router = express.Router
-
 const users = [{name: 'hama', email: 'hmmshl@gmail.com'}]
 
 router.get ('/', (_, res) => {
